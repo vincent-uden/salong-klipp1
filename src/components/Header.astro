@@ -1,0 +1,42 @@
+---
+const { text, offset, align, animate } = Astro.props;
+
+const textAlignment = align === "left" ? "text-left" : "text-right";
+let animateClass = align === "left" ? "animate-slide-in-right" : "animate-slide-in-left";
+if (!animate) {
+  animateClass = "";
+}
+---
+<div class={animateClass}>
+  <div class={"rounded-full bg-gradient-to-r from-gold-light to-gold-dark px-8 py-3 " + offset}>
+      <p class={textAlignment + " text-fg text-3xl font-serif"}>{text}</p>
+  </div>
+</div>
+
+<style>
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+</style>

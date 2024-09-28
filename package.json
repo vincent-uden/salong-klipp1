@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@fontsource-variable/dm-sans": "^5.1.0",
+    "@fontsource/dm-sans": "^5.1.0",
+    "@fontsource/dm-serif-display": "^5.1.0",
+    "astro": "^4.15.9",
+    "typescript": "^5.6.2"
+  }
+}

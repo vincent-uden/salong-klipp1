@@ -1,0 +1,115 @@
+---
+import Header from '../components/Header.astro';
+import JustifiedHeader from '../components/JustifiedHeader.astro';
+
+import "@fontsource-variable/dm-sans"
+import "@fontsource/dm-serif-display"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/app.css" />
+		<title>Astro</title>
+	</head>
+	<body>
+       	<div class="bg-gradient-to-b from-[#2b2523] to-[#0c0808] min-h-screen flex flex-col gap-20 overflow-hidden relative">
+            <div class="bg-moroccan min-h-screen w-screen absolute top-0 left-0 z-0 opacity-10 scale-[250%] pointer-events-none"></div>
+           	<div class="relative h-48 overflow-hidden drop-shadow-xl">
+               	<img src="/salong.jpg" alt="Logo" class="h-auto w-full mb-4 absolute top-0 left-0"/>
+                    <div class="absolute top-0 left-0 w-full h-full bg-[#070302] opacity-80"></div>
+               	<img src="/logo.png" alt="Logo" class="h-36 w-auto mb-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+           	</div>
+           	<a href="#opening-hours"><Header text="Öppetider" offset="-translate-x-40" align="right" animate={true}/></a>
+           	<a href="#contact"><Header text="Kontakt" offset="translate-x-20" align="left" animate={true}/></a>
+           	<a href="#treatments"><Header text="Behandlingar" offset="-translate-x-20" align="right" animate={true}/></a>
+            <div class="flex flex-row gap-10 w-full items-center justify-center">
+              <a href="https://www.facebook.com/SalongKlipp1"><img src={"/facebook.svg"} alt="Facebook" class="w-12 cursor-pointer"/></a>
+              <a href="https://www.instagram.com/salongklipp_1/"><img src={"/instagram.svg"} alt="Instagram" class="w-12 cursor-pointer"/></a>
+            </div>
+            <div class="h-8"></div>
+        </div>
+        <div class="bg-gradient-to-r from-gold-light to-gold-dark flex flex-col items-center justify-center py-4 drop-shadow">
+            <img src={"/arrow.png"} alt="Down arrow" class="w-8 drop-shadow"/>
+        </div>
+        <div class="bg-zinc-100">
+            <div class="h-36"></div>
+           	<JustifiedHeader text="Öppetider" offset="-translate-x-40" align="left" id="opening-hours"/>
+            <div class="flex flex-row justify-around items-center mt-16 gap-4 w-80 mx-auto">
+                <img src={"/clock.svg"} alt="Down arrow" class="basis-16 grow-0"/>
+                <div class="text-fg font-sans text-lg font-light">
+                    <p>Vardagar: 10:00 - 18:00</p>
+                    <p>Lördagar: 10:00 - 14:00</p>
+                    <p>Söndagar: Stängt</p>
+                </div>
+            </div>
+            <p class="text-fg font-sans text-lg font-light italic w-80 mx-auto mt-4">
+            Dessa öppetider är garanterade men oftast öppnar salongen tidigare och stänger senare.
+            </p>
+            <div class="w-80 mx-auto flex flex-row items-center gap-4 justify-center mt-8">
+            <a href="https://maps.app.goo.gl/cQJnS61fgPETKrRC7"><p class="text-fg font-sans text-2xl font-light">Olskrokstorget 8</p></a>
+            <img src={"/pin.svg"} alt="Location" class="basis-12 grow-0"/>
+            </div>
+            <div class="h-16"></div>
+
+           	<JustifiedHeader text="Kontakta oss" align="right" id="contact"/>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-16">
+                Ring oss för information om priser, behandingar, produkter eller för att boka en tid.
+            </p>
+            <a href="tel:+46301595950">
+            <div class="mx-auto flex flex-row items-center gap-4 justify-center mt-8 bg-gradient-to-r from-gold-light to-gold-dark px-8 py-4 w-fit rounded-full">
+                <p class="text-fg font-sans text-2xl font-light text-nowrap">031-195950</p>
+                <img src={"/phone.svg"} alt="Phone" class="h-8 grow-0"/>
+            </div>
+            </a>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-8">
+                Följ oss på Instagram och Facebook för avvikande öppetider och erbjudanden.
+            </p>
+            <div class="flex flex-row gap-10 w-full items-center justify-center mt-8 drop-shadow">
+              <a href="https://www.facebook.com/SalongKlipp1"><img src={"/facebook.svg"} alt="Facebook" class="w-12 cursor-pointer"/></a>
+              <a href="https://www.instagram.com/salongklipp_1/"><img src={"/instagram.svg"} alt="Instagram" class="w-12 cursor-pointer"/></a>
+            </div>
+            <div class="h-16"></div>
+
+           	<JustifiedHeader text="Behandlingar" align="left" id="treatments"/>
+            <div class="relative">
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-16"> Klippning </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Färg </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Slingor </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Uppsättning </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Hårförlängning </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Permanent </p>
+            <p class="text-fg font-sans text-lg font-light w-80 mx-auto mt-1"> Styling </p>
+            <p class="font-sans text-lg font-light w-80 mx-auto mt-16 italic text-gold-dark">
+                Priser varierar från hår till hår beroende på behov och önskemål.
+            </p>
+            <p class="font-sans text-lg font-light w-80 mx-auto mt-4 italic text-gold-dark">
+                För prisinformation vänligen kontakta oss eller besök salongen.
+            </p>
+            <img src={"/treatments.svg"} alt="Treatment icons" class="w-[60%] absolute -top-4 right-10"/>
+            </div>
+            <div class="h-36"></div>
+        </div>
+        <div class="bg-gradient-to-r from-gold-light to-gold-dark flex flex-col items-center justify-center py-4 drop-shadow">
+            <img src={"/arrow.png"} alt="Up arrow" class="w-8 drop-shadow rotate-180" onclick='window.scrollTo({top: 0, behavior: "smooth"})'/>
+        </div>
+       	<div class="bg-gradient-to-b from-[#2b2523] to-[#0c0808] h-40 flex flex-col gap-2 overflow-hidden relative items-center justify-center">
+            <div class="bg-moroccan h-full w-screen absolute top-0 left-0 z-0 opacity-10 scale-[250%]">
+            </div>
+            <a href="tel:+46301595950">
+                <p class="text-zinc-50 font-sans text-lg font-light text-nowrap"> 031-195950</p>
+            </a>
+            <a href="https://maps.app.goo.gl/cQJnS61fgPETKrRC7"><p class="text-white font-sans text-lg font-light">Olskrokstorget 8</p></a>
+        </div>
+	</body>
+
+	<style>
+	.bg-moroccan {
+  background-color: #00000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23ffaa00' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+	</style>
+</html>

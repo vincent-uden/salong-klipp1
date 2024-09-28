@@ -1,0 +1,12 @@
+---
+const { text, align, id } = Astro.props;
+
+const textAlignment = align === "left" ? "text-left" : "text-right";
+const rounding = align === "right" ? "rounded-l-full" : "rounded-r-full";
+const justifcation = align === "right" ? "justify-end" : "justify-start";
+---
+<div class={`flex flex-row ${justifcation} w-full items-center`} id={id}>
+  <div class={`${rounding} bg-gradient-to-r from-gold-light to-gold-dark px-8 py-3 w-fit pr-20 drop-shadow`}>
+      <p class={textAlignment + " text-fg text-3xl font-serif"}>{text}</p>
+  </div>
+</div>
