@@ -9,4 +9,8 @@ export default defineConfig({
   output: "static",
   adapter: vercelStatic(),
   integrations: [tailwind()],
+  redirects: {
+    "/behandlingar": "/",
+    "/behandlingar.html": "/",
+  }
 });
